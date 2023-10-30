@@ -55,6 +55,9 @@ header{
     top: 55px;
     resize: none;
   }
+  .chat01{
+    font-size: 30px;
+  }
   .chat02{
     position: fixed;
     top:170px;
