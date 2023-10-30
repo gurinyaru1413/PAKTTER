@@ -13,7 +13,7 @@ CHAT.fire = {
     this.$button = $('#jsi-button');
 
     //データベースと接続する。各自登録時に出たコードに書き換え。
-    this.chatDataStore = new Firebase('https://chat-10251-default-rtdb.firebaseio.com/');
+    this.chatDataStore = new Firebase('https://chat-62965-default-rtdb.firebaseio.com/');
   },
 
   bindEvent:function(){
@@ -27,7 +27,6 @@ CHAT.fire = {
       var json = data.val();
       self.addText(json['user']);
       self.addText(json['message']);
-      self.addText(json['image']);
     });
   },
 
@@ -38,7 +37,6 @@ CHAT.fire = {
 
     var name = this.$name.val();
     var text = this.$textArea.val();
-    var image = this.$image.val();
 
     //データベースの中の「talks」に値を送り格納（'talks'は各自任意に設定可能）
     self.chatDataStore.child('talks').push({user:name, message:text});
