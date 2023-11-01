@@ -60,9 +60,10 @@
   </section> 
 
   <style>
-    ul > li:first-child {
-     color: black;
+    ul > li::before {
+     color: blue;
      font-size: 25px;
+     content: "ユーザー名:";
     }
     ul > li:nth-child(2n) {
      color: black;
@@ -70,8 +71,9 @@
     ul > li:nth-child(2n):before {
      content:"投稿内容:";
      font-size: 25px;
-     color: blue;
+     color: red;
     }
+
   </style>
 
 
